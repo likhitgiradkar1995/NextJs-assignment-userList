@@ -1,0 +1,141 @@
+.container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4-column grid */
+  grid-gap: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2-column grid on even smaller screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr; /* Single column on mobile devices */
+  }
+}
+
+.user-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 2px 2px #dee2e6;
+  background-color: #fff;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 5%;
+}
+
+.user-avatar {
+  width: calc(7.5rem * 1);
+  height: calc(7.5rem * 1);
+}
+
+.mantine-Avatar-image {
+  border-radius: 50%;
+}
+
+.user-info {
+  margin-top: calc(1rem * 1);
+  font-weight: 500;
+  font-size: calc(1.125rem * 1);
+  width: 100%;
+  h3 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+}
+
+.user-data {
+  display: flex;
+  align-items: center;
+  margin-top: calc(1rem * 1);
+  margin-left: 2rem;
+  color: #868e96;
+  font-size: 1.2rem;
+  a {
+    padding-left: 0.5rem;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.button-container {
+  display: flex;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.follow-btn {
+  padding: 0.6rem 1.7rem;
+  color: white;
+  background-color: #228be6;
+  margin-right: 0.5rem;
+  border: #fff;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.follow-btn:hover {
+  background-color: #1c7ed6;
+}
+
+.unfollow-btn {
+  padding: 0.6rem 1.3rem;
+  color: black;
+  background-color: white;
+  margin-right: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.unfollow-btn:hover {
+  background-color: #f8f9fa;
+}
+
+.delete-btn {
+  padding: 0.6rem 1.7rem;
+  color: #228be6;
+  background-color: white;
+  border: 1px solid #228be6;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #228be60d;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 600px) {
+  .user-card {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start on smaller screens */
+  }
+
+  .user-avatar {
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 10px; /* Add margin bottom to separate avatar and info */
+  }
+}
